@@ -1,2 +1,134 @@
-# LoRa-Tutorial
-Lora Tutorials 
+<html><head><base href="https://LoRa-tutorials.com">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LoRa Tutorials - Learn About Long Range Communication</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        color: #333;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #f0f8ff;
+    }
+    header {
+        background-color: #1e90ff;
+        color: white;
+        text-align: center;
+        padding: 1em;
+        border-radius: 5px;
+    }
+    nav {
+        background-color: #4169e1;
+        padding: 10px;
+        border-radius: 5px;
+        margin-top: 10px;
+    }
+    nav ul {
+        list-style-type: none;
+        padding: 0;
+    }
+    nav ul li {
+        display: inline;
+        margin-right: 10px;
+    }
+    nav ul li a {
+        color: white;
+        text-decoration: none;
+    }
+    .content {
+        background-color: white;
+        padding: 20px;
+        margin-top: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .lora-animation {
+        width: 100%;
+        height: 200px;
+        margin-bottom: 20px;
+    }
+</style>
+</head>
+<body>
+    <header>
+        <h1>LoRa Tutorials</h1>
+        <p>Your Gateway to Long Range Communication</p>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="https://LoRa-tutorials.com/introduction">Introduction</a></li>
+            <li><a href="https://LoRa-tutorials.com/basics">LoRa Basics</a></li>
+            <li><a href="https://LoRa-tutorials.com/applications">Applications</a></li>
+            <li><a href="https://LoRa-tutorials.com/tutorials">Tutorials</a></li>
+            <li><a href="https://LoRa-tutorials.com/resources">Resources</a></li>
+        </ul>
+    </nav>
+    
+    <div class="content">
+        <svg class="lora-animation" viewBox="0 0 1000 200">
+            <defs>
+                <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" style="stop-color:#4169e1;stop-opacity:1" />
+                    <stop offset="100%" style="stop-color:#1e90ff;stop-opacity:1" />
+                </linearGradient>
+            </defs>
+            <path d="M0,100 Q250,20 500,100 T1000,100" fill="none" stroke="url(#gradient)" stroke-width="4">
+                <animate attributeName="d" 
+                    values="M0,100 Q250,20 500,100 T1000,100;
+                            M0,100 Q250,180 500,100 T1000,100;
+                            M0,100 Q250,20 500,100 T1000,100"
+                    dur="10s" repeatCount="indefinite" />
+            </path>
+            <circle cx="20" cy="100" r="10" fill="#1e90ff">
+                <animate attributeName="cx" 
+                    values="20;980;20" 
+                    dur="10s" repeatCount="indefinite" />
+            </circle>
+        </svg>
+        
+        <h2>Welcome to LoRa Tutorials</h2>
+        <p>Dive into the world of Long Range (LoRa) communication technology. Whether you're a beginner or an experienced IoT developer, our tutorials and resources will help you master LoRa and its applications in the Internet of Things.</p>
+        
+        <h3>What is LoRa?</h3>
+        <p>LoRa (Long Range) is a spread spectrum modulation technique derived from chirp spread spectrum (CSS) technology. It enables long-range transmission with low power consumption, making it ideal for IoT and M2M applications.</p>
+        
+        <h3>Why Learn LoRa?</h3>
+        <ul>
+            <li>Long-range communication capabilities</li>
+            <li>Low power consumption for battery-operated devices</li>
+            <li>Ideal for IoT applications in smart cities, agriculture, and more</li>
+            <li>Growing ecosystem and market demand</li>
+        </ul>
+        
+        <h3>Get Started</h3>
+        <p>Ready to begin your LoRa journey? Check out our <a href="https://LoRa-tutorials.com/introduction">Introduction to LoRa</a> or dive right into our <a href="https://LoRa-tutorials.com/tutorials">hands-on tutorials</a>.</p>
+    </div>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+        const navItems = document.querySelectorAll('nav ul li a');
+        navItems.forEach(item => {
+            item.addEventListener('mouseover', () => {
+                item.style.backgroundColor = '#1e90ff';
+                item.style.transition = 'background-color 0.3s';
+            });
+            item.addEventListener('mouseout', () => {
+                item.style.backgroundColor = '';
+            });
+        });
+
+        // Simple tutorial recommendation system
+        const topics = ['hardware', 'software', 'networking', 'applications'];
+        const randomTopic = topics[Math.floor(Math.random() * topics.length)];
+        const recommendationElement = document.createElement('p');
+        recommendationElement.textContent = `Looking for a place to start? We recommend checking out our ${randomTopic} tutorials!`;
+        recommendationElement.style.fontWeight = 'bold';
+        recommendationElement.style.marginTop = '20px';
+        document.querySelector('.content').appendChild(recommendationElement);
+    });
+    </script>
+</body>
+</html>
