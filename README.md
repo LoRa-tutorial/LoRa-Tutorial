@@ -36,6 +36,6 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 Contact
 If you have any questions or suggestions, please open an issue or contact the maintainers:
 
-Project Lead - @LoRaLead
+Project Lead - birdmanbird7@gmail.com
 Community Manager - @LoRaCommunity
 Happy LoRa learning! 📡🌐
